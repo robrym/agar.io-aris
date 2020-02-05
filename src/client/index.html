@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="gameAreaWrapper">
-        <div id="status"><span class="title">Leaderboard</span></div>
+        <div id="status"><span class="title">Tabla de puntuaciones</span></div>
         <div class="chatbox" id="chatbox">
             <ul id="chatList" class="chat-list"></ul>
             <input id="chatInput" type="text" class="chat-input" placeholder="Chat aqui..." maxlength="35" />
@@ -31,8 +31,8 @@
             <b class="input-error">Nombre debe de ser alfanumerico solamente!</b>
             <br />
             <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
-            <button id="spectateButton">Spectate</button>
-            <button id="settingsButton">Settings</button>
+            <button id="spectateButton">Espectar</button>
+            <button id="settingsButton">Configuración</button>
             <br />
             <div id="settings">
                 <h3>Settings</h3>
@@ -42,17 +42,17 @@
                     <br />
                     <label><input id="continuity" type="checkbox">Continuar moviendo cuando el mouse este fuera de pantalla</label>
                     <br />
-                    <label><input id="roundFood" type="checkbox" checked>Rounded food</label>
-                    <label><input id="darkMode" type="checkbox">Toggle Dark Mode</label>
+                    <label><input id="roundFood" type="checkbox" checked>Redondear comida</label>
+                    <label><input id="darkMode" type="checkbox">Toggle Modo Oscuro</label>
                 </ul>
             </div>
             <div id="instructions">
-                <h3>Gameplay</h3>
+                <h3>¿Como jugar?</h3>
                 <ul>
-                    <li>Move your mouse on the screen to move your character.</li>
-                    <li>Eat food and other players in order to grow your character (food respawns every time a player eats it).</li>
-                    <li>A player's mass is the number of food particles eaten.</li>
-                    <li>Objective: Try to get fat and eat other players.</li>
+                    <li>Mueve tu mouse en la pantalla para mover a tu personaje.</li>
+                    <li>Come comida y otros jugadores para crecer (Comida reaparece cada vez que un jugador se la come).</li>
+                    <li>La masa de un jugador es la cantidad de particulas de comida comidas.</li>
+                    <li>Objetivo: Tratar de engordar comiendose a otros jugadoresTry to get fat and eat other players.</li>
                 </ul>
             </div>
         </div>
