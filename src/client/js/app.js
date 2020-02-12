@@ -185,8 +185,8 @@ function setupSocket(socket) {
         socket.emit('gotit', player);
         global.gameStart = true;
         debug('Game started at: ' + global.gameStart);
-        window.chat.addSystemLine('Connected to the game!');
-        window.chat.addSystemLine('Type <b>-help</b> for a list of commands.');
+        window.chat.addSystemLine('Conectado al juego!!');
+        window.chat.addSystemLine('Escribe <b>-help</b> para lista de comandos.');
         if (global.mobile) {
             document.getElementById('gameAreaWrapper').removeChild(document.getElementById('chatbox'));
         }
@@ -200,20 +200,20 @@ function setupSocket(socket) {
     });
 
     socket.on('playerDied', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> was eaten.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> fue comido.');
     });
 
     socket.on('playerDisconnect', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> disconnected.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> desconectado.');
     });
 
     socket.on('playerJoin', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> joined.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> ingreso.');
     });
 
     socket.on('leaderboard', function (data) {
         leaderboard = data.leaderboard;
-        var status = '<span class="title">Leaderboard</span>';
+        var status = '<span class="title">Satochis</span>';
         for (var i = 0; i < leaderboard.length; i++) {
             status += '<br />';
             if (leaderboard[i].id == player.id){
@@ -316,8 +316,11 @@ function drawCircle(centerX, centerY, radius, sides) {
 }
 
 function drawFood(food) {
-    graph.strokeStyle = 'hsl(' + food.hue + ', 100%, 45%)';
-    graph.fillStyle = 'hsl(' + food.hue + ', 100%, 50%)';
+
+   // graph.strokeStyle = 'hsl(' + food.hue + ', 100%, 45%)';
+    graph.strokeStyle = 'hsl((31, 100%, 20%)';
+  //  graph.fillStyle = 'hsl(' + food.hue + ', 100%, 50%)';
+    graph.fillStyle = 'hsl(30, 100%, 70%)';
     graph.lineWidth = foodConfig.border;
     drawCircle(food.x - player.x + global.screenWidth / 2,
                food.y - player.y + global.screenHeight / 2,
