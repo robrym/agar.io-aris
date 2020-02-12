@@ -3,7 +3,7 @@
 <head>
     <!-- Meta Properties -->
     <meta charset="UTF-8">
-    <title>Agar Aris</title>
+    <title>Agar Bitcoin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="gameAreaWrapper">
-        <div id="status"><span class="title">Tabla de puntuaciones</span></div>
+        <div id="status"><span class="title">Satochis</span></div>
         <div class="chatbox" id="chatbox">
             <ul id="chatList" class="chat-list"></ul>
             <input id="chatInput" type="text" class="chat-input" placeholder="Chat aqui..." maxlength="35" />
@@ -26,33 +26,33 @@
     </div>
     <div id="startMenuWrapper">
         <div id="startMenu">
-            <p>Open Agar</p>
-            <input type="text" tabindex="0" autofocus placeholder="Ingresa tu nombre" id="playerNameInput" maxlength="25" />
-            <b class="input-error">Nombre debe de ser alfanumerico solamente!</b>
+            <p>Agar</p>
+            <input type="text" tabindex="0" autofocus placeholder="Ingresa tu nombre aqui" id="playerNameInput" maxlength="25" />
+            <b class="input-error">El nombre debe de ser con caracteres alfanumericos solamente!</b>
             <br />
             <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
-            <button id="spectateButton">Espectar</button>
-            <button id="settingsButton">Configuración</button>
+            <button id="spectateButton">Observar</button>
+            <button id="settingsButton">Configuracion</button>
             <br />
             <div id="settings">
-                <h3>Settings</h3>
+                <h3>Configuracion</h3>
                 <ul>
-                    <label><input id="visBord" type="checkbox">Mostrar Borde</label>
-                    <label><input id="showMass" type="checkbox">Mostrar Masa</label>
+                    <label><input id="visBord" type="checkbox">Mostrar borde</label>
+                    <label><input id="showMass" type="checkbox">Mostrar masa</label>
                     <br />
-                    <label><input id="continuity" type="checkbox">Continuar moviendo cuando el mouse este fuera de pantalla</label>
+                    <label><input id="continuity" type="checkbox">Continuar moviendose cuando el mouse este fuera de la pantalla</label>
                     <br />
-                    <label><input id="roundFood" type="checkbox" checked>Redondear comida</label>
-                    <label><input id="darkMode" type="checkbox">Toggle Modo Oscuro</label>
+                    <label><input id="roundFood" type="checkbox" checked>Redondear Comida</label>
+                    <label><input id="darkMode" type="checkbox">Modo Oscuro</label>
                 </ul>
             </div>
             <div id="instructions">
-                <h3>¿Como jugar?</h3>
+                <h3>Juego</h3>
                 <ul>
-                    <li>Mueve tu mouse en la pantalla para mover a tu personaje.</li>
-                    <li>Come comida y otros jugadores para crecer (Comida reaparece cada vez que un jugador se la come).</li>
-                    <li>La masa de un jugador es la cantidad de particulas de comida comidas.</li>
-                    <li>Objetivo: Tratar de engordar comiendose a otros jugadoresTry to get fat and eat other players.</li>
+                    <li>Mueve tu mouse a la pantalla para mover a tu personaje.</li>
+                    <li>Come comida y a otros jugadores para hacer crecer a tu personaje (La comida reaparece cada vez que un jugador la come).</li>
+                    <li>La cantidad de masa de un jugador es la cantidad de particulas comidas.</li>
+                    <li>Objetivo: Crece y come a otros jugadores.</li>
                 </ul>
             </div>
         </div>
