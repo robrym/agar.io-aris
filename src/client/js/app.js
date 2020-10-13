@@ -213,7 +213,7 @@ function setupSocket(socket) {
 
     socket.on('leaderboard', function (data) {
         leaderboard = data.leaderboard;
-        var status = '<span class="title">Satochis</span>';
+        var status = '<span class="title">Puntos</span>';
         for (var i = 0; i < leaderboard.length; i++) {
             status += '<br />';
             if (leaderboard[i].id == player.id){
@@ -317,10 +317,10 @@ function drawCircle(centerX, centerY, radius, sides) {
 
 function drawFood(food) {
 
-   // graph.strokeStyle = 'hsl(' + food.hue + ', 100%, 45%)';
-    graph.strokeStyle = 'hsl((31, 100%, 20%)';
-  //  graph.fillStyle = 'hsl(' + food.hue + ', 100%, 50%)';
-    graph.fillStyle = 'hsl(30, 100%, 70%)';
+   graph.strokeStyle = 'hsl(' + food.hue + ', 100%, 45%)';
+   // graph.strokeStyle = 'hsl((31, 100%, 20%)';
+    graph.fillStyle = 'hsl(' + food.hue + ', 100%, 50%)';
+    //graph.fillStyle = 'hsl(30, 100%, 70%)';
     graph.lineWidth = foodConfig.border;
     drawCircle(food.x - player.x + global.screenWidth / 2,
                food.y - player.y + global.screenHeight / 2,
@@ -542,7 +542,7 @@ function gameLoop() {
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
         graph.font = 'bold 30px sans-serif';
-        graph.fillText('You died!', global.screenWidth / 2, global.screenHeight / 2);
+        graph.fillText('Perdiste!', global.screenWidth / 2, global.screenHeight / 2);
     }
     else if (!global.disconnected) {
         if (global.gameStart) {
@@ -592,15 +592,15 @@ function gameLoop() {
         graph.font = 'bold 30px sans-serif';
         if (global.kicked) {
             if (reason !== '') {
-                graph.fillText('You were kicked for:', global.screenWidth / 2, global.screenHeight / 2 - 20);
+                graph.fillText('Fuiste expulsado por:', global.screenWidth / 2, global.screenHeight / 2 - 20);
                 graph.fillText(reason, global.screenWidth / 2, global.screenHeight / 2 + 20);
             }
             else {
-                graph.fillText('You were kicked!', global.screenWidth / 2, global.screenHeight / 2);
+                graph.fillText('Fuiste expulsado!', global.screenWidth / 2, global.screenHeight / 2);
             }
         }
         else {
-              graph.fillText('Disconnected!', global.screenWidth / 2, global.screenHeight / 2);
+              graph.fillText('Desconectado!', global.screenWidth / 2, global.screenHeight / 2);
         }
     }
 }
