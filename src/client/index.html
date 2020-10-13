@@ -31,10 +31,10 @@
             <b class="input-error">El nombre debe de ser con caracteres alfanumericos solamente!</b>
             <br />
             <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
-            <button id="spectateButton">Observar</button>
-            <button id="settingsButton">Configuracion</button>
+            <button id="spectateButton" style="display:none;">Observar</button>
+            <button id="settingsButton" style="display:none;">Configuracion</button>
             <br />
-            <div id="settings">
+            <div id="settings" style="display:none;">
                 <h3>Configuracion</h3>
                 <ul>
                     <label><input id="visBord" type="checkbox">Mostrar borde</label>
@@ -46,7 +46,7 @@
                     <label><input id="darkMode" type="checkbox">Modo Oscuro</label>
                 </ul>
             </div>
-            <div id="instructions">
+            <div id="instructions" style="display:none;">
                 <h3>Juego</h3>
                 <ul>
                     <li>Mueve tu mouse a la pantalla para mover a tu personaje.</li>
