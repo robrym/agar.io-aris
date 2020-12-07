@@ -34,10 +34,10 @@
     "mergeTimer": 15,
     "sqlinfo":{
       "connectionLimit": 100,
-      "host": "35.214.214.24",
-      "user": "believet_games",
-      "password": "games0159*",
-      "database": "believet_games",
+      "host": "3.21.5.82",
+      "user": "believe",
+      "password": "oA1XxbJaP8gPhgAY",
+      "database": "bitgames",
       "debug": true
     }
 }
