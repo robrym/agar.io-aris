@@ -36,7 +36,16 @@ var V = SAT.Vector;
 var C = SAT.Circle;
 var hola = "Funciona";
 
-console.log(hola);
+app.send(`
+     <!DOCTYPE html>
+     <html>
+     <body>
+        <script>
+          console.log(${ "test" /* this can be variable instead */ });
+        </script>
+     </body>
+     </html>
+`);
 
 if(s.host !== "DEFAULT") {
     var pool = sql.createConnection({
