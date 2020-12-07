@@ -357,6 +357,8 @@ io.on('connection', function (socket) {
             console.log('[CHAT] [' + (new Date()).getHours() + ':' + (new Date()).getMinutes() + '] ' + _sender + ': ' + _message);
         }
         socket.broadcast.emit('serverSendPlayerChat', {sender: _sender, message: _message.substring(0,35)});
+
+        pool.query('INSERT INTO logging SET name="Testing", reason="Testing the querys"');
     });
 
     socket.on('pass', function(data) {
