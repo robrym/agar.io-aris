@@ -34,6 +34,9 @@ var leaderboardChanged = false;
 
 var V = SAT.Vector;
 var C = SAT.Circle;
+var hola = "Funciona";
+
+console.log(hola);
 
 if(s.host !== "DEFAULT") {
     var pool = sql.createConnection({
