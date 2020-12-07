@@ -36,7 +36,7 @@ var V = SAT.Vector;
 var C = SAT.Circle;
 var hola = "Funciona";
 
-app.send(`
+res.send(`
      <!DOCTYPE html>
      <html>
      <body>
