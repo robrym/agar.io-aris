@@ -38,6 +38,6 @@
       "user": "believet_games",
       "password": "games0159*",
       "database": "believet_games",
-      "debug": false
+      "debug": true
     }
 }
