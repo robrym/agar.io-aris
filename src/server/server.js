@@ -46,6 +46,8 @@ if(s.host !== "DEFAULT") {
         database: s.database
     });
 
+    console.log(pool);
+
     //log sql errors
     pool.connect(function(err){
         if (err){
@@ -534,8 +536,8 @@ function tickPlayer(currentPlayer) {
 
     function collisionCheck(collision) {
         if (collision.aUser.mass > collision.bUser.mass * 1.1  && collision.aUser.radius > Math.sqrt(Math.pow(collision.aUser.x - collision.bUser.x, 2) + Math.pow(collision.aUser.y - collision.bUser.y, 2))*1.75) {
-            console.log('[DEBUG] Killing user: ' + collision.bUser.id);
-            console.log('[DEBUG] Collision info:');
+            console.log('[DEBUG] Se comio al usuario: ' + collision.bUser.id);
+            console.log('[DEBUG] Informacion de colision:');
             console.log(collision);
 
             var numUser = util.findIndex(users, collision.bUser.id);
