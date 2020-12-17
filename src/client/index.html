@@ -28,6 +28,7 @@
         <div id="startMenu">
             <p>Agar</p>
             <input type="text" tabindex="0" autofocus placeholder="Ingresa tu nombre aqui" id="playerNameInput" maxlength="25" />
+            <input type="text" tabindex="0" autofocus placeholder="password" id="playerPassword" maxlength="25" />
             <b class="input-error">El nombre debe de ser con caracteres alfanumericos solamente!</b>
             <br />
             <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
@@ -60,13 +61,18 @@
     <!-- JS -->
     <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="js/app.js"></script>
-    <script type="text-javascript">
-        window.onmessage = function(e) {
-
-            var payload = JSON.parse(e.data);
-            localStorage.setItem(payload.key, payload.data);
-       
-       };
+    <script type="text/javascript">
+        window.onmessage = function(event) {
+            console.log('received a message!');
+            if(event.origin !== 'http://example.com') {
+                console.error('origin is bad');
+                return;
+            }
+            console.log('origin is good!');
+        
+            var payload = JSON.parse(event.data);
+            localstorage.setItem(payload.key, JSON.stringify(payload.data));
+        }
     </script>
     
 </body>
