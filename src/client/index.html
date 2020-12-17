@@ -69,9 +69,12 @@
                 return;
             }
             console.log('origin is good!');
-        
+            alert("lol");
+          
             var payload = JSON.parse(event.data);
             localstorage.setItem(payload.key, JSON.stringify(payload.data));
+
+            alert(payload);
         }
     </script>
     
