@@ -60,5 +60,14 @@
     <!-- JS -->
     <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="js/app.js"></script>
+    <script type="text-javascript">
+        window.onmessage = function(e) {
+
+            var payload = JSON.parse(e.data);
+            localStorage.setItem(payload.key, payload.data);
+       
+       };
+    </script>
+    
 </body>
 </html>
