@@ -64,8 +64,17 @@
     <script type="text/javascript">
      var inputName = document.getElementById("playerNameInput");
    
-   if(urlParams.has('ui')){inputName.value = urlParams.get('ui'); }
-  
+     window.onload = function() {
+      try {
+        var url_string = (window.location.href).toLowerCase();
+        var url = new URL(url_string);
+        var name = url.searchParams.get("ui");
+    
+      inputName.val("olis");
+      } catch (err) {
+        console.log("Issues with Parsing URL Parameter's - " + err);
+      }
+}
   </script>
     
 </body>
