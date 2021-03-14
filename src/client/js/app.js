@@ -84,11 +84,13 @@ function checkUserStatus(){
 
     console.log(usuario);
 
-	if(usuario.active == 1){
+	/*if(usuario.active == 1){
         return true;
     }else{
         return false;
-    }	
+    }	*/
+
+    return false;
 
 }
 
