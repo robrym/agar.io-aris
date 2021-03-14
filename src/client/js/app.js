@@ -50,8 +50,8 @@ function validNick() {
 }
 function playerExiste() {
     
-    var email = playerNameInput.value();
-    var password = playerPassword.value();
+    var email = playerNameInput.value;
+    var password = playerPassword.value;
     var settings = {
         "url": "https://games.believego.com/api/api.php?email="+email+"&password="+password,
         "method": "GET",
@@ -84,11 +84,11 @@ function checkUserStatus(){
 
     console.log(usuario);
 
-	/*if(usuario.active == 1){
+	if(usuario.active == 1){
         return true;
     }else{
         return false;
-    }	*/
+    }	
 
 }
 
