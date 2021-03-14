@@ -48,7 +48,7 @@ function validNick() {
 }
 function playerExiste() {
     
-    alert("entra");
+    
     var settings = {
         "url": "https://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
         "method": "GET",
@@ -57,16 +57,17 @@ function playerExiste() {
             "Accept": "application/json",
          },
       };
-      
+      console.log("hola");
       $.ajax(settings).done(function (response) {
         
         if(response.active == 1){
             return true;
         }
 
-        console.log(response);
+       
         alert(response);
       });
+      console.log(response);
     return false;
 }
 
