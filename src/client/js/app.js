@@ -58,6 +58,7 @@ function playerExiste() {
          },
       };
       console.log("hola");
+
       $.ajax(settings).done(function (response) {
         
         if(response.active == 1){
@@ -66,8 +67,9 @@ function playerExiste() {
 
        
         alert(response);
+        console.log(response);
       });
-      console.log(response);
+    
     return false;
 }
 
