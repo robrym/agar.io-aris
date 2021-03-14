@@ -4,6 +4,7 @@ var Canvas = require('./canvas');
 var global = require('./global');
 
 var playerNameInput = document.getElementById('playerNameInput');
+var playerPassword = document.getElementById('playerPassword');
 var socket;
 var reason;
 
@@ -45,6 +46,23 @@ function validNick() {
     debug('Regex Test', regex.exec(playerNameInput.value));
     return regex.exec(playerNameInput.value) !== null;
 }
+function playerExiste() {
+    
+    var settings = {
+        "url": "http://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
+        "method": "GET",
+        "timeout": 0,
+      };
+      
+      $.ajax(settings).done(function (response) {
+        
+        if(response.active == 1){
+            return true;
+        }
+
+      });
+    return false;
+}
 
 window.onload = function() {
 
@@ -61,7 +79,14 @@ window.onload = function() {
         // Checks if the nick is valid.
         if (validNick()) {
             nickErrorText.style.opacity = 0;
-            startGame('player');
+
+            if (playerExiste()) {
+                nickErrorText.style.opacity = 0;
+                startGame('player');
+            } else {
+                nickErrorText.style.opacity = 1;
+            }
+
         } else {
             nickErrorText.style.opacity = 1;
         }
