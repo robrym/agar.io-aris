@@ -42,15 +42,18 @@ function startGame(type) {
 
 // Checks if the nick chosen contains valid alphanumeric characters (and underscores).
 function validNick() {
-    var regex = /^\w*$/;
+
+    var regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
     debug('Regex Test', regex.exec(playerNameInput.value));
     return regex.exec(playerNameInput.value) !== null;
+
 }
 function playerExiste() {
     
-    
+    var email = playerNameInput;
+    var password = playerPassword;
     var settings = {
-        "url": "https://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
+        "url": "https://games.believego.com/api/api.php?email="+email+"&password="+password,
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -67,7 +70,22 @@ function playerExiste() {
        
       });
     
-    return false;
+     var estatus = checkUserStatus();
+
+     return estatus;
+    
+}
+
+function checkUserStatus(){
+
+    usuario = JSON.parse(localStorage.getItem('user'));
+
+	if(usuario.active == 1){
+        return true;
+    }else{
+        return false;
+    }	
+
 }
 
 window.onload = function() {
@@ -86,10 +104,11 @@ window.onload = function() {
         // Checks if the nick is valid.
         if (validNick()) {
             nickErrorText.style.opacity = 0;
+            nickErrorTextLogin.style.opacity = 0;
 
             if (playerExiste()) {
                startGame('player');
-               nickErrorTextLogin.style.opacity = 0;
+               
             } else {
                 nickErrorTextLogin.style.opacity = 1;
             }
