@@ -70,9 +70,9 @@ function playerExiste() {
        
       });
     
-     var estatus = checkUserStatus();
+    
 
-     return estatus;
+    
     
 }
 
@@ -105,8 +105,9 @@ window.onload = function() {
         if (validNick()) {
             nickErrorText.style.opacity = 0;
             nickErrorTextLogin.style.opacity = 0;
-
-            if (playerExiste()) {
+            playerExiste();
+            
+            if (checkUserStatus()) {
                startGame('player');
                
             } else {
@@ -130,7 +131,7 @@ window.onload = function() {
         }
     };
 
-    playerNameInput.addEventListener('keypress', function (e) {
+    /*playerNameInput.addEventListener('keypress', function (e) {
         var key = e.which || e.keyCode;
 
         if (key === global.KEY_ENTER) {
@@ -141,7 +142,7 @@ window.onload = function() {
                 nickErrorText.style.opacity = 1;
             }
         }
-    });
+    });*/
 };
 
 // TODO: Break out into GameControls.
