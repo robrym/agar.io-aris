@@ -49,7 +49,7 @@ function validNick() {
 function playerExiste() {
     
     var settings = {
-        "url": "http://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
+        "url": "https://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
         "method": "GET",
         "timeout": 0,
       };
