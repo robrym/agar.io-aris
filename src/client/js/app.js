@@ -60,6 +60,7 @@ function playerExiste() {
             return true;
         }
 
+        console.log(response);
       });
     return false;
 }
