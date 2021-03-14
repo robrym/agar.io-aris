@@ -62,6 +62,8 @@ function playerExiste() {
       };
    
 
+      console.log(settings);
+
       $.ajax(settings).done(function (response) {
         
        
@@ -106,7 +108,7 @@ window.onload = function() {
             nickErrorText.style.opacity = 0;
             nickErrorTextLogin.style.opacity = 0;
             playerExiste();
-            
+
             if (checkUserStatus()) {
                startGame('player');
                
