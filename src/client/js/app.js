@@ -57,17 +57,14 @@ function playerExiste() {
             "Accept": "application/json",
          },
       };
-      console.log("hola");
+   
 
       $.ajax(settings).done(function (response) {
         
-        if(response.active == 1){
-            return true;
-        }
-
        
-        alert(response);
-        console.log(response);
+        localStorage.setItem('user', JSON.stringify(response));
+                  
+       
       });
     
     return false;
