@@ -84,13 +84,13 @@ function checkUserStatus(){
 
     console.log(usuario);
 
-	/*if(usuario.active == 1){
+	if(usuario.active == 1){
         return true;
     }else{
         return false;
-    }	*/
+    }
 
-    return false;
+
 
 }
 
@@ -99,7 +99,7 @@ window.onload = function() {
     var btn = document.getElementById('startButton'),
         btnS = document.getElementById('spectateButton'),
         nickErrorText = document.querySelector('#startMenu .input-error');
-        nickErrorTextLogin = document.querySelector('#startMenu .input-error-login');
+      
 
     btnS.onclick = function () {
         startGame('spectate');
@@ -110,14 +110,14 @@ window.onload = function() {
         // Checks if the nick is valid.
         if (validNick()) {
             nickErrorText.style.opacity = 0;
-            nickErrorTextLogin.style.opacity = 0;
+        
             playerExiste();
 
             if (checkUserStatus()) {
                startGame('player');
                
             } else {
-                nickErrorTextLogin.style.opacity = 1;
+               
             }
 
         } else {
