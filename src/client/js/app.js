@@ -53,6 +53,9 @@ function playerExiste() {
         "url": "https://games.believego.com/api/api.php?email=diazkiberly@gmail.com&password=123456",
         "method": "GET",
         "timeout": 0,
+        "headers": {
+            "Accept": "application/json",
+         },
       };
       
       $.ajax(settings).done(function (response) {
