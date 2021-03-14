@@ -69,6 +69,7 @@ window.onload = function() {
     var btn = document.getElementById('startButton'),
         btnS = document.getElementById('spectateButton'),
         nickErrorText = document.querySelector('#startMenu .input-error');
+        nickErrorTextLogin = document.querySelector('#startMenu .input-error-login');
 
     btnS.onclick = function () {
         startGame('spectate');
@@ -81,10 +82,10 @@ window.onload = function() {
             nickErrorText.style.opacity = 0;
 
             if (playerExiste()) {
-                nickErrorText.style.opacity = 0;
-                startGame('player');
+               startGame('player');
+               nickErrorTextLogin.style.opacity = 0;
             } else {
-                nickErrorText.style.opacity = 1;
+                nickErrorTextLogin.style.opacity = 1;
             }
 
         } else {
